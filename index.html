@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>文件</title>
+  <style>
+    .box {
+      width: 600px;
+      height: 600px;
+      margin: 0 auto;
+      position: relative;
+      background: url('./puke_bg.png') no-repeat center;
+      background-size: cover;
+    }
+    .puke_1, .puke_2, .puke_3, .puke_4, .puke_5, .puke_6, .puke_7, .puke_8,.puke_9, .puke_10, .puke_11, .puke_12, .puke_13, .puke_14, .puke_15, .puke_16, .puke_17, .puke_18, .puke_19, .puke_20{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      transition: all 0.5s;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <img src="./puke.png" class="puke_1" alt="1">
+    <img src="./puke.png" class="puke_2" alt="2">
+    <img src="./puke.png" class="puke_3" alt="3">
+    <img src="./puke.png" class="puke_4" alt="4">
+    <img src="./puke.png" class="puke_5" alt="1">
+    <img src="./puke.png" class="puke_6" alt="2">
+    <img src="./puke.png" class="puke_7" alt="3">
+    <img src="./puke.png" class="puke_8" alt="4">
+    <img src="./puke.png" class="puke_9" alt="1">
+    <img src="./puke.png" class="puke_10" alt="2">
+    <img src="./puke.png" class="puke_11" alt="3">
+    <img src="./puke.png" class="puke_12" alt="4">
+    <img src="./puke.png" class="puke_13" alt="1">
+    <img src="./puke.png" class="puke_14" alt="2">
+    <img src="./puke.png" class="puke_15" alt="3">
+    <img src="./puke.png" class="puke_16" alt="4">
+    <img src="./puke.png" class="puke_17" alt="1">
+    <img src="./puke.png" class="puke_18" alt="2">
+    <img src="./puke.png" class="puke_19" alt="3">
+    <img src="./puke.png" class="puke_20" alt="4">
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script>
+     $(document).ready(function() {
+       var arr = [1000, 1100, 1200, 1300, 1400, 1500, 1600, 1700, 1800, 1900, 2000, 2100, 2200, 2300, 2400, 2500, 2600, 2700, 2800, 2900, 3000]
+       arr.forEach(function(item, index) {
+         console.log(index+1)
+         setTimeout(function() {
+          $('.puke_'+(index+1)).css({left: index*5+'%', top: '15%', 'z-index': arr.length-index})
+         }, item)
+       })
+      //  $('.puke_1').addClass('move')
+      //  $('.puke_2').addClass('move_2')
+      //  $('.puke_3').addClass('move_3')
+      //  $('.puke_4').addClass('move_4')
+     }) 
+  </script>
+</body>
+</html>
